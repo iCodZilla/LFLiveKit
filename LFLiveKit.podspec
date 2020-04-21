@@ -1,15 +1,15 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "LFLiveKit"
+  s.name         = "LFLiveKit-Fix"
   s.version      = "2.6"
-  s.summary      = "LaiFeng ios Live. LFLiveKit."
-  s.homepage     = "https://github.com/chenliming777"
+  s.summary      = "LaiFeng ios Live. LFLiveKit. Fix GPUImage main thread issue"
+  s.homepage     = "https://github.com/iCodZilla/LFLiveKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "chenliming" => "chenliming777@qq.com" }
+  s.author       = { "vg0x00" => "375460092@qq.com" }
   s.platform     = :ios, "7.0"
   s.ios.deployment_target = "7.0"
-  s.source       = { :git => "https://github.com/LaiFengiOS/LFLiveKit.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/iCodZilla/LFLiveKit.git", :tag => "#{s.version}" }
   s.source_files  = "LFLiveKit/**/*.{h,m,mm,cpp,c}"
   s.public_header_files = ['LFLiveKit/*.h', 'LFLiveKit/objects/*.h', 'LFLiveKit/configuration/*.h']
 
