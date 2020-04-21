@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary      = "LaiFeng ios Live. LFLiveKit. Fix GPUImage main thread issue"
   s.homepage     = "https://github.com/iCodZilla/LFLiveKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author       = { "vg0x00" => "375460092@qq.com" }
+  s.author       = { "iCodZilla" => "375460092@qq.com" }
   s.platform     = :ios, "7.0"
   s.ios.deployment_target = "7.0"
   s.source       = { :git => "https://github.com/iCodZilla/LFLiveKit.git", :tag => "#{s.version}" }
