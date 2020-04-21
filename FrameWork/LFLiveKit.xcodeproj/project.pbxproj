@@ -1998,6 +1998,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 84D8B3861D7574D600752B56;
@@ -2047,7 +2048,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"${env}\"";
+			shellScript = "echo \"${env}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
