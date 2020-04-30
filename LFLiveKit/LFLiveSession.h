@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger,LFLiveCaptureTypeMask) {
 - (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug *)debugInfo;
 /** callback socket errorcode */
 - (void)liveSession:(nullable LFLiveSession *)session errorCode:(LFLiveSocketErrorCode)errorCode;
+/** encoding video data */
+- (void)encodeVideoData:(nullable CVPixelBufferRef)pixelBuffer timeStamp:(uint64_t)timeStamp;
 @end
 
 @class LFLiveStreamInfo;

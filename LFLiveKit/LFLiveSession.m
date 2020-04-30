@@ -136,7 +136,13 @@
 }
 
 - (void)captureOutput:(nullable LFVideoCapture *)capture pixelBuffer:(nullable CVPixelBufferRef)pixelBuffer {
-    if (self.uploading) [self.videoEncoder encodeVideoData:pixelBuffer timeStamp:NOW];
+    if (self.uploading) {
+        // 源代码中的视频编码
+        [self.videoEncoder encodeVideoData:pixelBuffer timeStamp:NOW];
+
+        // 外部的视频编码delegate
+        [self.delegate encodeVideoData:pixelBuffer timeStamp:NOW];
+    }
 }
 
 #pragma mark -- EncoderDelegate
