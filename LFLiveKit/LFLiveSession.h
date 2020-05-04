@@ -170,5 +170,8 @@ typedef NS_ENUM(NSInteger,LFLiveCaptureTypeMask) {
 
 // 清空配置实体引用
 - (void)clearConfig;
+
+// 设置视频比特率
+- (void)setVideoByteRate: (NSInteger) byteRate;
 @end
 

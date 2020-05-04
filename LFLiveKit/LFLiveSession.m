@@ -447,4 +447,9 @@
 //// RECREATE HERE YOUR session OBJECT WITH THE NEW LFLiveVideoConfiguration
 //[self.session setRunning:YES];
 //[self.session startLive:stream];
+
+// 修改视频编码器的bite rate
+- (void)setVideoByteRate:(NSInteger)byteRate {
+    [self.videoEncoder setVideoBitRate:byteRate];
+}
 @end
