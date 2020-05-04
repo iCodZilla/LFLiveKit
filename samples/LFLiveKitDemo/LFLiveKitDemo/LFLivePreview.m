@@ -163,7 +163,7 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         videoConfiguration.videoMinBitRate = 500*1024;
         videoConfiguration.videoFrameRate = 24;
         videoConfiguration.videoMaxKeyframeInterval = 48;
-        videoConfiguration.outputImageOrientation = UIInterfaceOrientationLandscapeLeft;
+        videoConfiguration.outputImageOrientation = UIInterfaceOrientationPortraitUpsideDown;
         videoConfiguration.autorotate = NO;
         videoConfiguration.sessionPreset = LFCaptureSessionPreset720x1280;
         _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:videoConfiguration captureType:LFLiveCaptureDefaultMask];
@@ -359,7 +359,7 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
             if (_self.startLiveButton.selected) {
                 [_self.startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
                 LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
-                stream.url = @"rtmp://live.hkstv.hk.lxdns.com:1935/live/stream153";
+                stream.url = @"rtmp://39.102.55.127:1935/live/1";
                 [_self.session startLive:stream];
             } else {
                 [_self.startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];

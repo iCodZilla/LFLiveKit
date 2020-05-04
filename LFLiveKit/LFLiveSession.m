@@ -141,7 +141,9 @@
         [self.videoEncoder encodeVideoData:pixelBuffer timeStamp:NOW];
 
         // 外部的视频编码delegate
-        [self.delegate encodeVideoData:pixelBuffer timeStamp:NOW];
+        if (self.encodingDelegate) {
+            [self.encodingDelegate encodeVideoData:pixelBuffer timeStamp:NOW];
+        }
     }
 }
 

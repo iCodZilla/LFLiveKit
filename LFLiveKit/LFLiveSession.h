@@ -40,6 +40,13 @@ typedef NS_ENUM(NSInteger,LFLiveCaptureTypeMask) {
 };
 
 @class LFLiveSession;
+
+@protocol LFLiveSessionEncodingDelegate <NSObject>
+@optional
+/** encoding video data */
+- (void)encodeVideoData:(nullable CVPixelBufferRef)pixelBuffer timeStamp:(uint64_t)timeStamp;
+@end
+
 @protocol LFLiveSessionDelegate <NSObject>
 
 @optional
@@ -49,8 +56,6 @@ typedef NS_ENUM(NSInteger,LFLiveCaptureTypeMask) {
 - (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug *)debugInfo;
 /** callback socket errorcode */
 - (void)liveSession:(nullable LFLiveSession *)session errorCode:(LFLiveSocketErrorCode)errorCode;
-/** encoding video data */
-- (void)encodeVideoData:(nullable CVPixelBufferRef)pixelBuffer timeStamp:(uint64_t)timeStamp;
 @end
 
 @class LFLiveStreamInfo;
@@ -63,6 +68,9 @@ typedef NS_ENUM(NSInteger,LFLiveCaptureTypeMask) {
 ///=============================================================================
 /** The delegate of the capture. captureData callback */
 @property (nullable, nonatomic, weak) id<LFLiveSessionDelegate> delegate;
+
+/** The delegate of the video encoding */
+@property (nullable, nonatomic, weak) id<LFLiveSessionEncodingDelegate> encodingDelegate;
 
 /** The running control start capture or stop capture*/
 @property (nonatomic, assign) BOOL running;
