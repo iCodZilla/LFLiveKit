@@ -433,4 +433,18 @@
     }
 }
 
+// 私有函数, 清空配置
+- (void)clearConfig {
+    _videoCaptureSource = nil;
+    _audioCaptureSource = nil;
+}
+
+// 如何更新视频配置
+// [self.session stopLive];
+//[self.session setRunning:NO];
+//[self.session refreshVideoSource];
+//self.session = nil;
+//// RECREATE HERE YOUR session OBJECT WITH THE NEW LFLiveVideoConfiguration
+//[self.session setRunning:YES];
+//[self.session startLive:stream];
 @end

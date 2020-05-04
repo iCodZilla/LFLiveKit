@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LFLiveKit-Fix"
-  s.version      = "2.6.2"
+  s.version      = "2.6.4"
   s.summary      = "LaiFeng ios Live. LFLiveKit. Fix GPUImage main thread issue"
   s.homepage     = "https://github.com/iCodZilla/LFLiveKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }
