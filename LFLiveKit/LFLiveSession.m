@@ -72,6 +72,8 @@
 
 @implementation LFLiveSession
 
+@synthesize encodingDelegate;
+
 #pragma mark -- LifeCycle
 - (instancetype)initWithAudioConfiguration:(nullable LFLiveAudioConfiguration *)audioConfiguration videoConfiguration:(nullable LFLiveVideoConfiguration *)videoConfiguration {
     return [self initWithAudioConfiguration:audioConfiguration videoConfiguration:videoConfiguration captureType:LFLiveCaptureDefaultMask];
