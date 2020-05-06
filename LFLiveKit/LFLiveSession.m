@@ -139,13 +139,14 @@
 
 - (void)captureOutput:(nullable LFVideoCapture *)capture pixelBuffer:(nullable CVPixelBufferRef)pixelBuffer {
     if (self.uploading) {
-        // 源代码中的视频编码
-        [self.videoEncoder encodeVideoData:pixelBuffer timeStamp:NOW];
 
         // 外部的视频编码delegate
         if (self.encodingDelegate) {
             [self.encodingDelegate encodeVideoData:pixelBuffer timeStamp:NOW];
         }
+
+        // 源代码中的视频编码
+        [self.videoEncoder encodeVideoData:pixelBuffer timeStamp:NOW];
     }
 }
 
